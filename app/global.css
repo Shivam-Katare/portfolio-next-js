@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 ::selection {
   background-color: #47a3f3;
@@ -15,6 +16,64 @@
   --sh-jsxliterals: #6266d1;
   --sh-property: #e25a1c;
   --sh-entity: #e25a1c;
+}
+
+.gallery-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 1%;
+}
+
+.container__item {
+  height: auto;
+  margin-top: 1vw;
+  width: 98vw;
+}
+
+.container__item:first-child {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .container__item:first-child {
+    width: 100%;
+  }
+  .container__item:nth-child(n+2) {
+    flex: 1;
+    margin-right: 1%;
+  }
+  .container__item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 890px) {
+  .gallery-container {
+    max-height: 15rem;
+    overflow-y: scroll;
+  }
+  .container__item{
+    width: 30vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .container__item:nth-child(-n+2) {
+    flex: none;
+    margin: 0;
+    width: 49.5%;
+  }
+  .container__item:first-child {
+    margin-right: 1%;
+  }
+  .container__item:nth-child(n+3) {
+    flex: 1;
+    margin-right: 1%;
+  }
+  .container__item:last-child {
+    margin-right: 0;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -147,4 +206,232 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+/* Project */
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== THEME ===============*/
+.nav__buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color .3s;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section__title-1,
+.section__title-2 {
+  position: relative;
+  font-size: var(--h1-font-size);
+  width: max-content;
+  margin: 0.75rem auto 2rem;
+}
+
+.section__title-1 span,
+.section__title-2 span {
+  z-index: 5;
+  position: relative;
+}
+
+.section__title-1::after,
+.section__title-2::after {
+  content: "";
+  width: 40px;
+  height: 28px;
+  background-color: hsla(14, 98%, 50%, 0.2);
+  position: absolute;
+  top: -4px;
+  right: -8px;
+}
+
+.section__title-2::after {
+  top: initial;
+  bottom: -4px;
+}
+
+.geometric-box {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--first-color);
+  rotate: -30deg;
+}
+
+.geometric-box::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--black-color);
+  left: -5px;
+  top: -5px;
+}
+
+.main {
+  overflow: hidden; /* For animation ScrollReveal */
+}
+
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/*=============== BUTTON ===============*/
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+
+.button {
+  background-color: var(--black-color);
+  padding: 1.1rem 1.5rem;
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+  border-radius: 0.75rem;
+  transition: background-color 0.4s;
+}
+
+.button i {
+  font-size: 1.25rem;
+}
+
+/*=============== PROJECTS ===============*/
+.projects {
+  background-color: var(--container-color);
+  transition: background-color 0.4s;
+}
+
+.projects__container {
+  row-gap: 2rem;
+}
+
+.projects__card {
+  padding: 1rem 1rem 2rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.4s;
+  background-color: var(--white-color);
+  border-radius: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
+
+.projects__image {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.projects__img {
+  border-radius: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
+
+.projects__button {
+  position: absolute;
+  right: 1rem;
+  bottom: -1.5rem;
+  padding: 1rem;
+  background: white;
+  box-shadow: 1px -1px 10px 0px;
+}
+
+.projects__content {
+  margin-bottom: 1.25rem;
+  margin-top: 35px;
+}
+
+.projects__buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.projects__link {
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  transition: color 0.4s;
+}
+
+.projects__link i {
+  font-size: 1rem;
+  color: var(--title-color);
+  transition: color 0.4s;
+}
+
+.projects__link:hover,
+.projects__link:hover i {
+  color: var(--first-color);
+}
+
+#style-4::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar
+{
+	width: 3px;
+	background-color: #F5F5F5;
+}
+
+#style-4::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 2px solid #555555;
 }

@@ -4,22 +4,24 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
+import { Container } from './components/container'
+import Head from 'next/head'
+import Favicon from '../public/favicon.ico'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'Shivam Katare',
+    template: 'Shivam Katare',
   },
   description: 'This is my portfolio.',
   openGraph: {
-    title: 'My Portfolio',
+    title: 'Shivam Katare',
     description: 'This is my portfolio.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Shivam Katare',
     locale: 'en_US',
     type: 'website',
   },
@@ -52,14 +54,16 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+      <Head>
+        <link rel="icon" href="/favicon.ico" sizes='32x32' />
+      </Head>
+      <body className="mx-auto flex max-w-3xl flex-col items-stretch pt-2 px-5 sm:px-0">
+        <Container className="mx-auto flex max-w-3xl flex-col items-stretch py-10">
           <Navbar />
           {children}
           <Footer />
           <Analytics />
-          <SpeedInsights />
-        </main>
+        </Container>
       </body>
     </html>
   )
