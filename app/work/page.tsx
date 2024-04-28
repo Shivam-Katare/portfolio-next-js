@@ -82,7 +82,7 @@ function Work() {
 
       </p>
       <p>
-        With community contributions, I also love to write blogs and share my learning with the world. You can rread my blogs <Link href='/blog' target='_blank' className='text-green-500 font-extrabold'> here. </Link>.
+        With community contributions, I also love to write blogs and share my learning with the world. You can read my blogs <Link href='/blog' target='_blank' className='text-green-500 font-extrabold'> here. </Link>.
       </p>
 
       <div className='w-full grid grid-rows-[0.6fr_0.7fr] mt-4 gap-y-0'>
