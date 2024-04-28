@@ -51,7 +51,7 @@ function Project() {
                 <p className='text-white righteous-regular text-[30px]'>{project.title}</p>
               </div>
 
-              <a href={project.projectUrl} className="projects__button button">
+              <a href={project.projectUrl} className="projects__button button" target='_blank'>
                 <FaArrowUpRightFromSquare />
               </a>
             </div>
