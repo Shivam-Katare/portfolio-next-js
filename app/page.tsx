@@ -30,7 +30,7 @@ export default function Page() {
               <FaLinkedin className='text-2xl' style={{ color: "blue" }} />
             </Link>
 
-            <Link href="https://shivamkatareblog.hashnode.dev/" target='_blank'>
+            <Link href="https://hashnode.com/@ShivamKatare" target='_blank'>
               <FaHashnode className='text-2xl text-blue-500' />
             </Link>
 
