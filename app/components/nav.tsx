@@ -17,6 +17,10 @@ const navItems = {
     name: 'Blog',
     newTab: true,
   },
+  '/contact-me': {
+    name: 'Contact me',
+    newTab: false
+  }
 }
 
 export function Navbar() {
