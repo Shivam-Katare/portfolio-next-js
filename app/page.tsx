@@ -1,8 +1,8 @@
 "use client"
 
-import { FaGithub, FaHashnode, FaLinkedin, FaMailchimp, FaSquareXTwitter } from "react-icons/fa6";
+import { FaGithub, FaHashnode, FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
-import { Button, FloatButton, Tag, Tooltip } from 'antd';
+import { Button, FloatButton, Image, Tag, Tooltip } from 'antd';
 import Project from "./components/project";
 import { Container } from "./components/container";
 import Feedbacks from "./components/feedbackcard";
@@ -51,9 +51,30 @@ export default function Page() {
         </p>
       </div>
 
+      <div className="grid grid-cols-3 mx-w-screen">
+        <Image
+          src="/speaker.jpeg"
+          alt="Shivam Katare"
+          className='rounded-sm border-2 border-black max-w-screen'
+        />
+
+        <Image
+          src="/speakerTwo.jpeg"
+          alt="Shivam Katare"
+          className='rounded-sm border-2 border-black max-w-screen'
+        />
+
+        <Image
+          src="/speakerThree.jpeg"
+          alt="Shivam Katare"
+          className='rounded-sm border-2 border-black max-w-screen'
+        />
+      </div>
+
       <div className='text-center'>
-        I write about web development, including JavaScript, React, Next.js, Tailwind CSS, and more.
-        Also, I share my experiences as a developer and the latest tech industry trends.
+      I always love being part of a community. I share my knowledge by writing blog posts,
+      speaking at tech events, posting on social media about tech-related topics like web development,
+      and participating in tech events. I enjoy collective learning and sharing knowledge with everyone.
       </div>
 
       <h2 className='text-[30px] text-center font-semibold tracking-tighter'>Projects</h2>
